@@ -7,24 +7,40 @@
     <title>Document</title>
 </head>
 <body>
-     <div class="header">
+     <header>
         <h1>Stock Predictions</h1>
-     </div>
+     </header>
      <main>
         <section class="action-panel">
-            <form id="ticker-input-form">
-                <label for="input">Ingresa el token del stock</label>
-            </form>
+				<form id="ticker-input-form">
+					<label for="ticker-input"> Add up to 3 stock tickers below to get a super accurate stock predictions report</label>
+					<div class="form-input-control">
+						<input type="text" id="ticker-input" placeholder="MSFT">
+						<button class="add-ticker-btn">
+							<img src="images/add.svg" class="add-ticker-svg" alt="add"> 
+						</button>
+					</div>
+				</form>
+				<p class="ticker-choice-display">
+					Your tickers will appear here...
+				</p>
+				<button class="generate-report-btn" type="button" disabled>
+					Generate Report
+				</button>
+				<p class="tag-line">Always correct 15% of the time!</p>
         </section>
+
         <section class="loading-panel">
-
+            <img src="images/loader.svg" alt="loading">
+            <div id="api-message">Querying Stocks API...</div>
         </section>
-        <section class="output-panel">
 
+        <section class="output-panel">
+            <h2>Your Report</h2>
         </section>
      </main>
      <footer>
-        &copy; Estos no son consejos finacieros reales
+        &copy; This is not real financial advice! and only must be take as a school project
      </footer>
 
     <script src="./js/index.js" type="module"></script>
