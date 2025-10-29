@@ -11,7 +11,7 @@ function getDateFormated(n){
     return formatDate(date)
 }
 
-export const date = {
+export const dates = {
     startDate: getDateFormated(3),
     endDate: getDateFormated(1)
 }
